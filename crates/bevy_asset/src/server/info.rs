@@ -203,7 +203,6 @@ impl AssetInfos {
                 }
             })
             .ok_or(GetOrCreateHandleInternalError::HandleMissingButTypeIdNotSpecified)?;
-        // TODO this looks like it might be where these errors are happening.
 
         match handles.entry(type_id) {
             Entry::Occupied(entry) => {
